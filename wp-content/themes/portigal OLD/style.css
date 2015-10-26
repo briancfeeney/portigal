@@ -1,0 +1,354 @@
+/*
+Theme Name: portigal.com
+Description: portigal.com theme updated and cleaned up by Jennifer Zelazny/SDAC Inc for WordPress 2.7
+Version: 2.0
+*/
+
+a img, img {border:none;}
+
+
+
+#newsColumn  {  
+font-size: 11px; 
+}
+
+body {
+	margin: 0;
+	background:#ddd;
+}
+
+body, td, div {  
+	font-family: Geneva, Arial, Helvetica, sans-serif; 
+	font-size: 14px; 
+	font-style: normal; 
+	line-height: 16px; 
+	color: #666666
+}
+small {
+	font-size: 10px;
+	line-height: 11px;
+}
+a.whitelink:link {color: #FFFFFF;}
+		
+A:link    {color:#0066FF; text-decoration:none; }
+A:visited {color:#0066FF; text-decoration:none; }
+A:active  {color:#0066FF; text-decoration:none; }
+A:hover   {color:#0066FF; text-decoration:underline;}
+
+
+img { 
+	margin: 0 
+}
+		
+#wrapper {
+	position: relative;
+	height: 100%;
+	width: 700px;
+	border-left: 10px solid black;
+	border-right: 10px solid black;
+	margin: 0 auto;
+	background-color: #000;
+} 
+
+#insideWrapper {
+	position: relative;
+	top: 0px;
+	height: 100%;
+	width: 700px;
+	margin: 0px;
+	background-color: #fff;
+	text-align: left;
+}
+
+#insideWrapper:after{
+content: "."; display: block; line-height: 1px; font-size: 1px; clear: both;}
+
+.post {
+	position: relative;
+	top: 0px;
+	width: 420px;
+	left: 0px;
+	margin: 0px;
+	background-color: #fff;
+	text-align: left;
+}
+
+#content {
+	width: 420px;
+	float:left;
+	display:inline;
+	margin-left: 100px;
+	background-color: #fff;
+	text-align: left;
+	padding-top: 15px;
+}
+
+#sidebar {
+	float:left;
+	display:inline;
+	width: 170px;
+	padding: 0px;
+	text-align: left;
+	font-size: 7.5pt;
+	line-height: 11pt;
+	margin-left:105px;
+	
+} 
+#sidebar .title {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	color: #666;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#sidebar a.title {
+	color: #666;
+	text-decoration: none;
+}
+
+#sidebar a.title:visited {
+	color: #666;
+	text-decoration: none;
+}
+
+#sidebar a.title:hover {
+	color: #0066FF;
+	border: 0px;
+	text-decoration: none;
+}
+
+.left {
+	float: left;
+	margin: 0px 10px 0px 10px;
+}
+
+.right {
+	float: right;
+	margin: 0px 10px 0px 10px;
+}
+
+#masthead {
+	position: relative;
+	top: 0px;
+	background: url('images/masthead.jpg');
+ 	width: 700px;
+ 	height: 225px;
+	margin: 0px;
+	margin-top: 0px;
+}
+
+.centeredImage {
+    text-align:center;
+    margin-top:10px;
+    margin-bottom:0px;
+    padding:0px;
+}
+
+#footer {
+	font-size: 7pt;
+	position: relative;
+	color: #fff;
+	top: 5px;
+	width: 700px;
+	margin: 0px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+#footer a {
+	color: #fff;
+}
+
+#footer a:visited {
+	color: #fff;
+}
+
+#footer a:hover {
+	color: #ff3333;
+	border: 0px;
+}
+ 
+
+.sep {
+	position: relative;
+	background: url('images/sep.jpg');
+ 	width: 162px;
+	height: 14px;
+	margin: 0px;
+	padding: 0px;
+	left: 132px;
+	text-align: center;
+}
+
+.commentBox {
+	position: relative;
+	margin: 0 auto;
+	width: 90%; 
+	background-color: #f5f5f5; 
+	text-align: left; 
+	border: 1px solid #999; 
+	padding: 5px;
+}
+
+code {
+	font-family: Courier New, Geneva;
+	text-align:left;
+	color:#666;
+	font-size: 8pt;
+}
+
+input {
+	background-color: #FFFFFF;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+	padding: 0px;
+}
+
+h2 {
+	color: #666666;
+	font-size: 16px;
+	text-align: left;
+}
+h2 a, h2 a:link, h2 a:visited {
+	color: #0066FF;
+}
+
+blockquote, blockquote p {
+	text-indent: 0px;
+	margin-bottom: 7px;
+	color: #666;
+}
+
+.title {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	color: #333;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+a.title, a.title:visited, .title a, .title a:visited, .title a:link {
+	color: #333;
+	text-decoration: none;
+}
+
+a.title:hover, .title a:hover {
+	color: #0066FF;
+	border: 0px;
+	text-decoration: none;
+}
+
+#blogTitle {
+	position: relative;
+	top: 50px;
+	left: 20px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	color: #333;
+	font-size: 16px;
+	text-align: left;
+	font-weight: bold;
+}
+
+#blogTitle a {
+	color: #333;
+}
+
+#blogTitle a:visited {
+	color: #333;
+}
+
+#blogTitle a:hover {
+	color: #ff3333;
+	border: 0px;
+}
+
+.commentPos {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight:bold;
+}
+
+a.commentPos {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #ff3333;
+	font-weight:bold;
+}
+
+a.commentPos:visited {
+	color: #ff3333;
+}
+
+a.commentPos:hover {
+	color: #000;
+	border: 0px;
+}
+
+
+body div.navigation{clear:both;;text-align:center;}
+body div.navigation div{width:28%;}
+body div.navigation div.nav-next{float:right;text-align:left;}
+body div.navigation div.nav-previous{float:left;text-align:right;}
+
+
+/* SDAC Added */
+#footer {clear:both;}
+.clearjz {clear:both;}
+#nav-below {margin:15px 0 15px 0;}
+.alignright {float:right;}
+.alignleft {float:left;}
+
+p strong {font-weight:bold !important;color:#333;}
+
+#headerBanner {height:171px;}
+
+#content.clients, #content.clients .post {width:680px;}
+
+.company {float:left; display:inline; width:140px;margin-right:30px;height:160px;}
+.company p {margin:0 !important;padding:0 !important;font-size: 7.5pt;}
+
+#subscribeFooter {margin-left:250px;}
+
+textarea#comment {width:95%;}
+
+#siteWrapper {width:800px;margin:0 auto;}
+#siteContent {float:left;background:#fff;width:800px;padding-top:10px;}
+
+
+
+#headerNav {background:#333;height:27px;}
+#headerNav ul {list-style:none;margin:0;padding:0;}
+#headerNav ul li {list-style:none;float:left;line-height:27px;}
+#headerNav ul li a {padding:0 15px 0 15px;text-indent:-9999px;overflow:hidden;display:block;height:27px;}
+
+#headerNav ul#main_nav {margin-left:100px;} 
+
+#headerNav ul li#nav-home a {background:url('images/nav_home.gif') no-repeat;width:44px;}
+#headerNav ul li#nav-home a:hover, .home #headerNav ul li#nav-home a {background:url('images/nav_home_o.gif') no-repeat;}
+
+#headerNav ul li#nav-services a {background:url('images/nav_services.gif') no-repeat;width:74px;}
+#headerNav ul li#nav-services a:hover, .page-id-1677 #headerNav ul li#nav-services a {background:url('images/nav_services_o.gif') no-repeat;}
+
+#headerNav ul li#nav-clients a {background:url('images/nav_clients.gif') no-repeat;width:77px;}
+#headerNav ul li#nav-clients a:hover, .page-id-1678 #headerNav ul li#nav-clients a {background:url('images/nav_clients_o.gif') no-repeat;}
+
+#headerNav ul li#nav-contact a {background:url('images/nav_contact.gif') no-repeat;width:82px;}
+#headerNav ul li#nav-contact a:hover, .page-id-1679 #headerNav ul li#nav-contact a {background:url('images/nav_contact_o.gif') no-repeat;}
+
+#headerNav ul li#nav-speaking a {background:url('images/nav_speaking.gif') no-repeat;width:82px;}
+#headerNav ul li#nav-speaking a:hover, .page-id-2175 #headerNav ul li#nav-speaking a {background:url('images/nav_speaking_o.gif') no-repeat;}
+
+
+#headerNav ul#about_blog {float:right;}
+#headerNav ul#about_blog li a {padding:0 5px 0 5px;}
+
+#headerNav ul li#nav-about a {background:url('images/nav_about_us.gif') no-repeat;width:76px;}
+#headerNav ul li#nav-about a:hover, .page-id-1683 #headerNav ul li#nav-about a  {background:url('images/nav_about_us_o.gif') no-repeat;}
+
+#headerNav ul li#nav-blog a {background:url('images/nav_blog.gif') no-repeat;width:36px;}
+#headerNav ul li#nav-blog a:hover, .archive #headerNav ul li#nav-blog a, .single #headerNav ul li#nav-blog a {background:url('images/nav_blog_o.gif') no-repeat;}

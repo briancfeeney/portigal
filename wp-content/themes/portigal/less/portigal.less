@@ -1,0 +1,539 @@
+@import "bootstrap.less";
+
+@purple: #665079;
+@purple-light: lighten(@purple,55%);
+@white: #ffffff;
+@black: #000000;
+@linkhover: lighten(@purple,20%);
+
+/* -------------------------------------------------------------------------------- */
+// FONTS
+
+.franklinBook {
+	font-family: "franklin-gothic-urw-cond",sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.franklinMedium {
+	font-family: "franklin-gothic-urw-cond",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+}
+
+.caslon {
+	font-family: "adobe-caslon-pro",serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.caslonI {
+	font-family: "adobe-caslon-pro",serif;
+	font-style: italic;
+	font-weight: 400;
+}
+
+.caslonB {
+	font-family: "adobe-caslon-pro",serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+.caslonBI {
+	font-family: "adobe-caslon-pro",serif;
+	font-style: italic;
+	font-weight: 700;
+}
+
+
+/* -------------------------------------------------------------------------------- */
+// BASIC
+
+body {
+	.caslon();
+}
+
+p, li {
+	line-height: 1.5em;
+}
+
+h1 {
+	color: @purple;
+	.franklinBook();
+	font-size: 3em;
+}
+
+h2 {
+	color: @purple;
+	.franklinBook();
+	font-size: 1.75em;
+}
+
+h3 {
+	color: @purple;
+	.franklinBook();
+	font-size: 1.5em;
+	margin-top: 1.5em;
+}
+
+h4 {
+	color: @purple;
+	.franklinBook();
+	font-size: 1.25em;
+	margin-top: 2em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+h5 {
+	font-size: 1.25em;
+	margin-top: 2em;
+	.caslonB();
+	text-transform: capitalize;
+}
+
+h6 {
+	font-size: 1em;
+	margin-top: 2em;
+	.caslonBI();
+	text-transform: capitalize;
+}
+
+a {
+	color: @purple;
+	&:hover {
+		text-decoration: none;
+		color: lighten(@purple,20%);
+	}
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+blockquote {
+	border-left: .5em solid lighten(@purple,50%);
+	font-size: 1.1em;
+	margin: 1.5em 0;
+}
+
+article {
+	overflow: hidden;
+}
+
+/* -------------------------------------------------------------------------------- */
+// MISCELLANEOUS
+
+.icon {
+	height: 1em;
+	width: auto;
+	g,
+	path {
+		fill: @white;
+	}
+}
+
+.steve-more {
+	color: @purple;
+	.franklinBook();
+	margin: 2em 0;
+	display: inline-block;
+	&:hover {
+		.arrow g {
+			fill: lighten(@purple,20%);
+		}
+	}
+	&.sidebar {
+		margin: 5em 0;
+	}
+}
+
+.arrow {
+    width: 65px;
+    height: auto;
+    margin-left: 1em;
+    position: relative;
+    top: 5px;
+    g {
+    	fill: @purple;
+    }
+}
+
+.secondary-section {
+	padding: 4em 0;
+	background-color: @purple-light;
+}
+
+.quote {
+	margin: 1.5em 0;
+	span {
+		display: block;
+		.caslonB();
+	}
+}
+
+.btn a {
+	border: none;
+	background-color: @purple;
+	.franklinBook();
+	color: @white;
+	text-transform: uppercase;
+	padding: .5em 1em;
+	line-height: 1.7em;
+	&:hover {
+		background-color: @linkhover;
+	}
+}
+
+.pagination {
+	overflow: hidden;
+	width: 100%;
+	.previous,
+	.next {
+		padding: 0;
+		border-radius: 5px;
+		border: none;
+		background-color: @purple;
+		.franklinBook();
+		text-transform: uppercase;
+		padding: .5em 1em;
+		line-height: 1.7em;
+		&:hover {
+			background-color: @linkhover;
+			a {
+				color: @white;
+			}
+		}
+		a {
+			color: @white;
+		}
+	}
+	.previous {
+		float: left;
+	}
+	.next {
+		float: right;
+	}
+}
+
+#search {
+	input {
+		float: left;
+	}
+	input[type="text"] {
+		border: none;
+		background-color: lighten(@black,90%);
+		width: 70%;
+		border-radius: 5px 0 0 5px;
+		padding: .5em;
+		outline: none;
+		&:focus {
+			outline: none;
+		}
+	}
+	input[type="submit"] {
+		border: none;
+		background-color: @purple;
+		.franklinBook();
+		color: @white;
+		text-transform: uppercase;
+		padding: .5em 1em;
+		line-height: 1.7em;
+		&:hover {
+			background-color: @linkhover;
+		}
+		border-radius: 0 5px 5px 0;
+	}
+}
+
+
+// ARTICLES
+
+article {
+	margin: 1em 0 5em;
+	.title {
+		&:hover h1 {
+			color: lighten(@purple,20%);
+		}
+	}
+	.post-meta {
+		.franklinMedium();
+		margin-bottom: 1.5em;
+		span {
+			color: lighten(@black, 50%);
+		}
+	}
+	h1 {
+		font-size: 2.5em;
+	}
+	.post-content {
+		overflow: hidden;
+		margin-bottom: 1em;
+		padding-bottom: 1em;
+		border-bottom: 1px solid @purple;
+	}
+	.post-tags {
+		.tag-title {
+			display: inline-block;
+			width: 40px;
+			.franklinBook();
+			color: @purple;
+		}
+		.tags {
+			display: inline-block;
+			font-size: .9em;
+			a {
+				color: @black;
+				&:hover {
+					color: lighten(@purple,20%);
+				}
+			}
+		}
+	}
+}
+
+#other-news {
+	img {
+		display: none;
+	}
+}
+
+/* -------------------------------------------------------------------------------- */
+// HEADER
+
+#portigal-wordmark {
+	width: 100%;
+	max-width: 300px;
+	margin-bottom: .25em;
+}
+
+#header {
+	background-color: @purple;
+	color: @white;
+	padding-top: 7em;
+	margin-bottom: 4em;
+	a {
+		color: @white;
+		&:hover {
+			color: @white;
+		}
+	}
+	.main-navigation {
+		border-top: 1px solid @white;
+		border-bottom: 1px solid @white;
+		.franklinBook();
+		letter-spacing: 1px;
+		.navbar-default {
+			background-color: transparent;
+			box-shadow: none;
+		}
+		.navbar {
+			border: none;
+			border-radius: 0;
+			background-image: none;
+			min-height: 0;
+			margin-bottom: 0;
+		}
+		.navbar-collapse {
+			padding: 0;
+			ul {
+				li {
+					border-right: 1px solid @white;
+					&:first-child a {
+						padding-left: 0;
+					}
+					a {
+						background-image: none;
+						box-shadow: none;
+						text-transform: uppercase;
+						padding: 1em 2em;
+					}
+				}
+			}
+		}
+		.header-email {
+			float: left;
+			a {
+				padding: 1em 2em;
+				padding-right: 0;
+				display: inline-block;
+			}
+			.icon {
+				margin-right: .5em;
+				position: relative;
+			    top: 3px;
+			}
+		}
+		@media (max-width: 1199px) {
+			font-size: .9em;
+			.navbar-collapse ul li a,
+			.header-email a {
+				padding: .75em 1.5em;
+			}
+			.header-email a {
+				padding-right: 0;
+			}
+		}
+		@media (max-width: 995px) {
+			.navbar-collapse ul li a,
+			.header-email a {
+				padding: .5em 1em;
+			}
+			.header-email a {
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+
+/* -------------------------------------------------------------------------------- */
+// MAIN
+
+#main {
+	margin-bottom: 5em;
+}
+
+
+/* -------------------------------------------------------------------------------- */
+// SIDEBARS
+
+.sidebar-intro {
+	padding-bottom: 1em;
+	border-bottom: 1px solid @purple;
+	margin-bottom: 5em;
+	p {
+		font-size: 1.1em;
+	}
+}
+
+.sidebar-section {
+	overflow: hidden;
+	margin-bottom: 3em;
+	max-width: 30em;
+	ul {
+		.list-unstyled();
+		margin: 1em 0;
+		li {
+			margin-bottom: 1em;
+		}
+	}
+	ol {
+		margin: 0 0 0 1.5em;
+		padding: 0;
+	}
+}
+
+
+
+
+/* -------------------------------------------------------------------------------- */
+// PODCAST
+
+.podcast-intro {
+	margin: 3em 0 5em;
+	img {
+		max-width: 200px;
+		margin-bottom: 2em;
+	}
+}
+
+.podcast-list {
+	overflow: hidden;
+	margin: 0;
+	li {
+		float: left;
+		margin-right: 2em;
+		.franklinBook(); 
+		font-size: 1.25em;
+	}
+}
+
+
+/* -------------------------------------------------------------------------------- */
+// BLOG
+
+.sidebar-section {
+	.blog-list {
+		li {
+			margin-bottom: 0;
+		}
+	}
+}
+
+#other-news {
+	article {
+		margin-bottom: 1.5em;
+	}
+}
+
+
+/* -------------------------------------------------------------------------------- */
+// BOOKS
+
+.book {
+	margin-bottom: 4em;
+	h1 {
+		margin-top: .25em;
+	}
+	p {
+		max-width: 36em;
+	}
+}
+
+
+/* -------------------------------------------------------------------------------- */
+// FOOTER
+
+#site-footer {
+	background-color: @purple;
+	color: @white;
+	padding: 3em 0;
+	a {
+		color: @white;
+		&:hover {
+			opacity: .5;
+		}
+	}
+	ul {
+		.list-unstyled();
+	}
+	.icon {
+		margin-right: .5em;
+		max-width: 1em;
+	}
+	.contact-info {
+		.franklinBook();
+		margin-bottom: 3em;
+		font-size: 1.2em;
+	}
+	.footer-p {
+		margin-bottom: 3em;
+	}
+	.footer-label {
+		.franklinBook();
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-bottom: .5em;
+	}
+	.footer-media {
+		margin-bottom: 3em;
+		.footer-media-item {
+			overflow: hidden;
+			margin-bottom: 2em;
+		}
+		img {
+			float: left;
+			max-width: 33%;
+			margin-right: 1em;
+		}
+	}
+	.footer-social,
+	.footer-subscribe {
+		margin-bottom: 3em;
+		li {
+			line-height: 2em;
+		}
+	}
+}

@@ -23,3 +23,27 @@ function sdac_comment($comment, $args, $depth) {
 <?php
         }
  ?>
+
+
+<?php
+
+// Our custom post type function
+function create_posttype() {
+
+  register_post_type( 'movies',
+  // CPT Options
+    array(
+      'labels' => array(
+        'name' => __( 'Books' ),
+        'singular_name' => __( 'Book' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'books'),
+    )
+  );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );
+
+?>
