@@ -9,12 +9,13 @@ Template Name: Podcast
 
 <div class="col-md-7 content-area" id="main-column">
 	<main id="main" class="site-main" role="main">
-  
+
 		<?php
 		$wp_query = new WP_Query();
 		$wp_query->query(array(
 		'paged' => $paged,
 		'posts_per_page' => 10,
+		'tag' => 'dollars-to-donuts',
 		));
 
 		while ($wp_query->have_posts()) : $wp_query->the_post(); ?>

@@ -7,6 +7,10 @@
 	<meta name="description" content="Portigal Consulting, bringing together user research (ethnography), design and business strategy">
 	<meta name="copyright" content="2001-2015 Steve Portigal">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/portigal.css" type="text/css" media="screen" />
+
+	<script src="https://use.typekit.net/dsj5yjf.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
 	<script language="javascript" type="text/javascript" src="http://portigal.com/scripts.js"></script>
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" />
@@ -16,9 +20,7 @@
     <?php wp_get_archives('type=monthly&format=link'); ?>
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
-	<script src="https://use.typekit.net/dsj5yjf.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
-	
+
 	<?php wp_head(); ?>
 	<!-- WP Engine -->
 </head>
@@ -85,11 +87,11 @@
 								</div>
 								
 								<div class="collapse navbar-collapse navbar-primary-collapse">
-									<ul id="menu-dev-menu" class="nav navbar-nav"><li id="menu-item-22004" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-22004 active active"><a href="http://portigal.dev">Work With Us</a></li>
-										<li id="menu-item-22005" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-22005 active active"><a href="http://portigal.dev">Workshops</a></li>
-										<li id="menu-item-22006" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-22006 active active"><a href="http://portigal.dev">Books</a></li>
-										<li id="menu-item-22007" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-22007 active active"><a href="http://portigal.dev/speaking">Speaking</a></li>
-										<li id="menu-item-22008" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-22008 active active"><a href="http://portigal.dev/blog">Blog</a></li>
+									<ul id="menu-dev-menu" class="nav navbar-nav"><li id="menu-item-22004" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-22004 active active"><a href="http://portigal.dev/work-with-us/">Work With Us</a></li>
+										<li id="menu-item-22005" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-22005 active active"><a href="http://portigal.dev/workshops/">Workshops</a></li>
+										<li id="menu-item-22006" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-22006 active active"><a href="http://portigal.dev/books/">Books</a></li>
+										<li id="menu-item-22007" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-22007 active active"><a href="http://portigal.dev/speaking/">Speaking</a></li>
+										<li id="menu-item-22008" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-22008 active active"><a href="http://portigal.dev/blog/">Blog</a></li>
 										<li id="menu-item-22009" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-22009 active active"><a href="http://portigal.dev/dollars-to-donuts/">Podcast</a></li>
 									</ul>
 

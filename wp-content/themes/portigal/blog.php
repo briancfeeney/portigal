@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Blog
+Template Name: Blogxxx
 */
 // Which page of the blog are we on?
 $paged = get_query_var('paged');

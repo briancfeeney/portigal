@@ -72,8 +72,8 @@ p.series-description {
 }
 
 .seriesmeta {
-	background-color: #E5F3FF;
-	font-size: .8em;
+	background-color: transparent;
+	font-size: 1em;
 }
 
 .series-nav-left {

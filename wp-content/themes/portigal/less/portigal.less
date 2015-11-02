@@ -97,6 +97,13 @@ h6 {
 	margin-top: 2em;
 	.caslonBI();
 	text-transform: capitalize;
+	color: @purple;
+}
+
+p {
+	a {
+		.caslonB();
+	}
 }
 
 a {
@@ -105,6 +112,10 @@ a {
 		text-decoration: none;
 		color: lighten(@purple,20%);
 	}
+}
+
+ol, ul {
+	padding-left: 1.25em;
 }
 
 img {
@@ -116,10 +127,6 @@ blockquote {
 	border-left: .5em solid lighten(@purple,50%);
 	font-size: 1.1em;
 	margin: 1.5em 0;
-}
-
-article {
-	overflow: hidden;
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -163,6 +170,11 @@ article {
 .secondary-section {
 	padding: 4em 0;
 	background-color: @purple-light;
+}
+
+.top-secondary {
+	margin-top: -4em;
+	margin-bottom: 4em;
 }
 
 .quote {
@@ -252,6 +264,7 @@ article {
 
 article {
 	margin: 1em 0 5em;
+	overflow: hidden;
 	.title {
 		&:hover h1 {
 			color: lighten(@purple,20%);
@@ -266,6 +279,16 @@ article {
 	}
 	h1 {
 		font-size: 2.5em;
+	}
+	h2 {
+		margin-top: 2em;
+	}
+	h6 {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+	a {
+		.caslonB();
 	}
 	.post-content {
 		overflow: hidden;
@@ -291,11 +314,45 @@ article {
 			}
 		}
 	}
+	.steve-more {
+		float: right;
+	}
+}
+
+.testimonial {
+	margin: 3em 0 2em;
+	padding-bottom: 2em;
+	border-bottom: 1px solid @purple;
+	&:last-child {
+		border: none;
+	}
+	.testimonial-body {
+		font-size: 1.25em;
+	}
+	.attribution {
+		.caslonB();
+	}
 }
 
 #other-news {
 	img {
 		display: none;
+	}
+}
+
+.client-list {
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		-webkit-columns: 3;
+		-moz-columns: 3;
+        columns: 3;
+        @media (max-width: 600px) {
+        	-webkit-columns: 2;
+			-moz-columns: 2;
+	        columns: 2;
+        }
 	}
 }
 
@@ -444,7 +501,7 @@ article {
 	margin: 0;
 	li {
 		float: left;
-		margin-right: 2em;
+		margin-right: 1.5em;
 		.franklinBook(); 
 		font-size: 1.25em;
 	}
@@ -467,6 +524,34 @@ article {
 		margin-bottom: 1.5em;
 	}
 }
+
+.seriesmeta {
+	.franklinBook();
+	font-size: 1em;
+	color: lighten(@black,60%);
+	line-height: 1.5em;
+    a {
+    	.franklinBook();
+    }
+}
+
+/*
+.post-meta {
+	float: left;
+}
+
+.seriesmeta {
+	float: left;
+	.franklinBook();
+	font-size: 1em;
+	color: lighten(@black,60%);
+	line-height: 1.5em;
+    margin-left: 1em;
+    a {
+    	.franklinBook();
+    }
+}
+*/
 
 
 /* -------------------------------------------------------------------------------- */
