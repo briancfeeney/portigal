@@ -6879,6 +6879,9 @@ blockquote {
   font-size: 1.1em;
   margin: 1.5em 0;
 }
+*:focus {
+  outline: none;
+}
 /* -------------------------------------------------------------------------------- */
 .icon {
   height: 1em;
@@ -7099,6 +7102,30 @@ article .steve-more {
     columns: 2;
   }
 }
+.powerpress_player {
+  margin: 1em 0;
+}
+.powerpress_player .mejs-container .mejs-controls {
+  background: white;
+}
+.powerpress_player .mejs-container .mejs-controls .mejs-time {
+  display: none;
+}
+.powerpress_player .mejs-container .mejs-controls .mejs-volume-button {
+  display: none;
+}
+.powerpress_player .mejs-container .mejs-controls div[aria-label="volumeSlider"] {
+  display: none;
+}
+.powerpress_player .mejs-container .mejs-controls .mejs-time-rail .mejs-time-total {
+  background: #cccccc;
+}
+.powerpress_player .mejs-container .mejs-controls .mejs-time-rail .mejs-time-current {
+  background: #9982ad;
+}
+.powerpress_player .mejs-container .mejs-controls .mejs-time-rail .mejs-time-handle {
+  background: #665079;
+}
 /* -------------------------------------------------------------------------------- */
 #portigal-wordmark {
   width: 100%;
@@ -7110,6 +7137,14 @@ article .steve-more {
   color: #ffffff;
   padding-top: 7em;
   margin-bottom: 4em;
+}
+@media (max-width: 768px) {
+  #header {
+    padding-top: 1em;
+  }
+  #header #portigal-wordmark {
+    max-width: 200px;
+  }
 }
 #header a {
   color: #ffffff;
@@ -7138,6 +7173,13 @@ article .steve-more {
 }
 #header .main-navigation .navbar-collapse {
   padding: 0;
+  border: none;
+  box-shadow: none;
+}
+@media (max-width: 768px) {
+  #header .main-navigation .navbar-collapse {
+    padding: 1em 0;
+  }
 }
 #header .main-navigation .navbar-collapse ul li {
   border-right: 1px solid #ffffff;
@@ -7150,6 +7192,18 @@ article .steve-more {
   box-shadow: none;
   text-transform: uppercase;
   padding: 1em 2em;
+}
+#header .main-navigation .navbar-collapse.in .navbar-nav {
+  margin: 0;
+}
+#header .main-navigation .navbar-collapse.in ul li {
+  border: none;
+}
+#header .main-navigation .navbar-collapse.in ul li a {
+  padding: 1em 0;
+}
+#header .main-navigation .navbar-collapse.in .header-email a {
+  padding: 1em 0;
 }
 #header .main-navigation .header-email {
   float: left;
@@ -7184,6 +7238,16 @@ article .steve-more {
   #header .main-navigation .header-email a {
     padding-right: 0;
   }
+}
+.navbar-toggle {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+.navbar-toggle .icon-bar {
+  background: #ffffff;
+  width: 24px;
+  height: 4px;
 }
 /* -------------------------------------------------------------------------------- */
 #main {

@@ -8,8 +8,13 @@
 	<meta name="copyright" content="2001-2015 Steve Portigal">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/portigal.css" type="text/css" media="screen" />
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 	<script src="https://use.typekit.net/dsj5yjf.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.fitvids.js"></script>
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/collapse.js"></script>
 
 	<script language="javascript" type="text/javascript" src="http://portigal.com/scripts.js"></script>
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
@@ -30,7 +35,7 @@
 	<header id="header" role="banner">
 		<div class="container">
 			<div class="row site-branding">
-				<div class="col-md-6 site-title">
+				<div class="col-md-6 site-title col-sm-10 col-xs-10">
 					<h1 class="site-title-heading">
 						<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
 							<svg version="1.1" id="portigal-wordmark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -59,7 +64,7 @@
 						</a>
 					</h1>
 				</div>
-				<div class="col-md-6 page-header-top-right">
+				<div class="col-md-6 col-sm-2 col-xs-2 page-header-top-right">
 					<div class="sr-only">
 						<a href="#content" title="<?php esc_attr_e('Skip to content', 'bootstrap-basic'); ?>"><?php _e('Skip to content', 'bootstrap-basic'); ?></a>
 					</div>
@@ -69,6 +74,13 @@
 					</div>
 					<div class="clearfix"></div>
 					<?php } // endif; ?> 
+
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-primary-collapse">
+						<span class="sr-only"><?php _e('Toggle navigation', 'bootstrap-basic'); ?></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
 				</div>
 			</div><!--.site-branding-->
 		</div>
@@ -78,12 +90,7 @@
 						<div class="col-md-12">
 							<nav class="navbar navbar-default" role="navigation">
 								<div class="navbar-header">
-									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-primary-collapse">
-										<span class="sr-only"><?php _e('Toggle navigation', 'bootstrap-basic'); ?></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
+									
 								</div>
 								
 								<div class="collapse navbar-collapse navbar-primary-collapse">

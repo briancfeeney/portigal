@@ -133,5 +133,9 @@
     </footer>
 
     <?php wp_footer(); ?>
+
+    <script>
+      $("#content").fitVids();
+    </script>
   </body>
 </html>
