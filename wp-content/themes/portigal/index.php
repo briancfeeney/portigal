@@ -20,6 +20,7 @@
 					</article>
 				</main>
 			</div>
+			<?php get_sidebar('blog'); ?>
 
 
 	<?php endwhile; ?>

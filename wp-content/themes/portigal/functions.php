@@ -1,5 +1,9 @@
 <?php 
 
+if( function_exists('acf_add_options_page') ) {
+  acf_add_options_page();
+}
+
   function show_posts_nav() {
   	global $wp_query;
   	return ($wp_query->max_num_pages > 1);

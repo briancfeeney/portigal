@@ -6812,12 +6812,22 @@ h1 {
   font-weight: 400;
   font-size: 3em;
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+}
 h2 {
   color: #665079;
   font-family: "franklin-gothic-urw-cond", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.75em;
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5em;
+  }
 }
 h3 {
   color: #665079;
@@ -6826,6 +6836,11 @@ h3 {
   font-weight: 400;
   font-size: 1.5em;
   margin-top: 1.5em;
+}
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1em;
+  }
 }
 h4 {
   color: #665079;
@@ -6858,6 +6873,16 @@ p a {
   font-family: "adobe-caslon-pro", serif;
   font-style: normal;
   font-weight: 700;
+}
+#main p,
+#main ul {
+  font-size: 1.1em;
+}
+@media (max-width: 768px) {
+  #main p,
+  #main ul {
+    font-size: 1em;
+  }
 }
 a {
   color: #665079;
@@ -6903,9 +6928,10 @@ blockquote {
   fill: #9982ad;
 }
 .steve-more.sidebar {
-  margin: 5em 0;
+  margin: 3em 0;
 }
 .arrow {
+  display: none;
   width: 65px;
   height: auto;
   margin-left: 1em;
@@ -6915,13 +6941,23 @@ blockquote {
 .arrow g {
   fill: #665079;
 }
+@media (max-width: 768px) {
+  .arrow {
+    width: 43px;
+    top: 2.5px;
+  }
+}
 .secondary-section {
   padding: 4em 0;
+  margin-top: 3em;
   background-color: #f1eef4;
 }
 .top-secondary {
   margin-top: -4em;
   margin-bottom: 4em;
+}
+.top-secondary p {
+  font-size: 1.25em;
 }
 .quote {
   margin: 1.5em 0;
@@ -7024,7 +7060,20 @@ article .post-meta {
   margin-bottom: 1.5em;
 }
 article .post-meta span {
-  color: #808080;
+  font-family: "franklin-gothic-urw-cond", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #b3b3b3;
+  margin-left: .5em;
+}
+article .post-meta span:before {
+  content: "|";
+  margin-right: .5em;
+}
+article .post-meta span a {
+  font-family: "franklin-gothic-urw-cond", sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 article h1 {
   font-size: 2.5em;
@@ -7056,7 +7105,7 @@ article .post-tags .tag-title {
   color: #665079;
 }
 article .post-tags .tags {
-  display: inline-block;
+  display: inline;
   font-size: .9em;
 }
 article .post-tags .tags a {
@@ -7067,6 +7116,18 @@ article .post-tags .tags a:hover {
 }
 article .steve-more {
   float: right;
+}
+article img.alignleft {
+  float: left;
+  max-width: 50%;
+  width: auto;
+  margin-right: 1em;
+}
+article img.alignright {
+  float: right;
+  max-width: 50%;
+  width: auto;
+  margin-left: 1em;
 }
 .testimonial {
   margin: 3em 0 2em;
@@ -7084,23 +7145,16 @@ article .steve-more {
   font-style: normal;
   font-weight: 700;
 }
+.testimonials h2 {
+  margin-top: 3em;
+}
+.testimonials .testimonial:first-child {
+  margin-top: 1em;
+}
 #other-news img {
-  display: none;
-}
-.client-list ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  -webkit-columns: 3;
-  -moz-columns: 3;
-  columns: 3;
-}
-@media (max-width: 600px) {
-  .client-list ul {
-    -webkit-columns: 2;
-    -moz-columns: 2;
-    columns: 2;
-  }
+  max-width: 25%;
+  float: left;
+  margin-right: 1em;
 }
 .powerpress_player {
   margin: 1em 0;
@@ -7181,17 +7235,49 @@ article .steve-more {
     padding: 1em 0;
   }
 }
+#header .main-navigation .navbar-collapse #menu-main-menu {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+#header .main-navigation .navbar-collapse #menu-main-menu li {
+  float: left;
+}
+@media (max-width: 768px) {
+  #header .main-navigation .navbar-collapse #menu-main-menu li {
+    float: none;
+  }
+  #header .main-navigation .navbar-collapse #menu-main-menu li a {
+    display: block;
+  }
+}
+#header .main-navigation .navbar-collapse #menu-main-menu li a {
+  display: inline-block;
+}
 #header .main-navigation .navbar-collapse ul li {
   border-right: 1px solid #ffffff;
 }
 #header .main-navigation .navbar-collapse ul li:first-child a {
-  padding-left: 0;
+  margin-left: -2em;
+}
+@media (max-width: 1199px) {
+  #header .main-navigation .navbar-collapse ul li:first-child a {
+    margin-left: -1.5em;
+  }
+}
+@media (max-width: 995px) {
+  #header .main-navigation .navbar-collapse ul li:first-child a {
+    margin-left: -1em;
+  }
 }
 #header .main-navigation .navbar-collapse ul li a {
   background-image: none;
   box-shadow: none;
   text-transform: uppercase;
   padding: 1em 2em;
+}
+#header .main-navigation .navbar-collapse ul li.active {
+  background-color: #735a88;
 }
 #header .main-navigation .navbar-collapse.in .navbar-nav {
   margin: 0;
@@ -7200,17 +7286,32 @@ article .steve-more {
   border: none;
 }
 #header .main-navigation .navbar-collapse.in ul li a {
-  padding: 1em 0;
+  padding: 1em;
+  margin: 0;
+}
+#header .main-navigation .navbar-collapse.in .header-email {
+  width: 100%;
 }
 #header .main-navigation .navbar-collapse.in .header-email a {
-  padding: 1em 0;
+  padding: 1em;
+  width: 100%;
+}
+@media (max-width: 1199px) {
+  #header .main-navigation .navbar-collapse.in .header-email a {
+    margin-right: -1.5em;
+  }
+}
+@media (max-width: 995px) {
+  #header .main-navigation .navbar-collapse.in .header-email a {
+    margin-right: -1em;
+  }
 }
 #header .main-navigation .header-email {
   float: left;
 }
 #header .main-navigation .header-email a {
   padding: 1em 2em;
-  padding-right: 0;
+  margin-right: -2em;
   display: inline-block;
 }
 #header .main-navigation .header-email .icon {
@@ -7218,25 +7319,33 @@ article .steve-more {
   position: relative;
   top: 3px;
 }
+#header .main-navigation .navbar-collapse ul li a,
+#header .main-navigation .header-email a {
+  background-color: transparent;
+  transition: all 0.1s ease-in-out;
+}
+#header .main-navigation .navbar-collapse ul li a:hover,
+#header .main-navigation .header-email a:hover {
+  background-color: #806498;
+  transition: all 0.1s ease-in-out;
+}
 @media (max-width: 1199px) {
   #header .main-navigation {
     font-size: .9em;
   }
-  #header .main-navigation .navbar-collapse ul li a,
-  #header .main-navigation .header-email a {
+  #header .main-navigation .navbar-collapse ul li a {
     padding: .75em 1.5em;
   }
   #header .main-navigation .header-email a {
-    padding-right: 0;
+    padding: .75em 1.5em;
   }
 }
 @media (max-width: 995px) {
-  #header .main-navigation .navbar-collapse ul li a,
-  #header .main-navigation .header-email a {
+  #header .main-navigation .navbar-collapse ul li a {
     padding: .5em 1em;
   }
   #header .main-navigation .header-email a {
-    padding-right: 0;
+    padding: .5em 1em;
   }
 }
 .navbar-toggle {
@@ -7279,6 +7388,34 @@ article .steve-more {
   margin: 0 0 0 1.5em;
   padding: 0;
 }
+.sidebar-section .testimonial {
+  margin: 1em 0 2em;
+  padding-bottom: 1em;
+}
+.sidebar-section .testimonial .testimonial-body {
+  font-size: 1em;
+}
+.sidebar-section .testimonial .attribution {
+  font-size: .9em;
+}
+.client-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+}
+@media (max-width: 600px) {
+  .client-list ul {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+  }
+}
+.client-list ul li {
+  margin: 0;
+}
 /* -------------------------------------------------------------------------------- */
 .podcast-intro {
   margin: 3em 0 5em;
@@ -7299,7 +7436,41 @@ article .steve-more {
   font-weight: 400;
   font-size: 1.25em;
 }
+.episode-list li {
+  margin-bottom: 0 !important;
+}
+article.podcast .post-meta {
+  margin-bottom: 0;
+}
 /* -------------------------------------------------------------------------------- */
+#homepage {
+  background: #665079;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding: 6em 0;
+  min-height: 10em;
+}
+@media (max-width: 768px) {
+  #homepage {
+    padding: 3em 0;
+  }
+}
+#homepage .intro-text {
+  font-size: 1.75em;
+  padding: 2em 0em;
+}
+@media (max-width: 768px) {
+  #homepage .intro-text {
+    font-size: 1.25em;
+  }
+}
+.page-template-home-page #header {
+  margin-bottom: 0;
+}
+/* -------------------------------------------------------------------------------- */
+.sidebar-section h2 {
+  margin-bottom: .75em;
+}
 .sidebar-section .blog-list li {
   margin-bottom: 0;
 }
@@ -7318,6 +7489,21 @@ article .steve-more {
   font-family: "franklin-gothic-urw-cond", sans-serif;
   font-style: normal;
   font-weight: 400;
+}
+.serieslist-box:first-child {
+  margin-top: 1em;
+}
+.serieslist-box .serieslist-content h2 {
+  font-family: "adobe-caslon-pro", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: .8em;
+  margin: .5em 0;
+}
+.serieslist-box p,
+.serieslist-box hr,
+.serieslist-box .imgset {
+  display: none;
 }
 /*
 .post-meta {
@@ -7339,12 +7525,46 @@ article .steve-more {
 /* -------------------------------------------------------------------------------- */
 .book {
   margin-bottom: 4em;
+  border-bottom: 1px solid #665079;
+  padding-bottom: 4em;
+}
+.book:last-child {
+  border: none;
 }
 .book h1 {
   margin-top: .25em;
 }
 .book p {
   max-width: 36em;
+}
+.book-cover {
+  margin-bottom: 4em;
+}
+.book-cover.at-small {
+  float: left;
+  max-width: 18%;
+  min-width: 100px;
+  margin-right: 2em;
+  margin-bottom: 1.5em;
+}
+.buy-the-book ul li {
+  margin-bottom: auto;
+}
+/* -------------------------------------------------------------------------------- */
+.selected-talks > h2 {
+  margin-top: .85em;
+}
+/* -------------------------------------------------------------------------------- */
+.search-info {
+  margin-bottom: 3em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #665079;
+}
+.search-info span {
+  color: #000000;
+  font-family: "adobe-caslon-pro", serif;
+  font-style: normal;
+  font-weight: 700;
 }
 /* -------------------------------------------------------------------------------- */
 #site-footer {
@@ -7373,6 +7593,9 @@ article .steve-more {
   margin-bottom: 3em;
   font-size: 1.2em;
 }
+#site-footer .contact-info a:hover li {
+  opacity: .5;
+}
 #site-footer .footer-p {
   margin-bottom: 3em;
 }
@@ -7393,7 +7616,7 @@ article .steve-more {
 }
 #site-footer .footer-media img {
   float: left;
-  max-width: 33%;
+  max-width: 140px;
   margin-right: 1em;
 }
 #site-footer .footer-social,
@@ -7403,4 +7626,22 @@ article .steve-more {
 #site-footer .footer-social li,
 #site-footer .footer-subscribe li {
   line-height: 2em;
+}
+@media (max-width: 768px) {
+  #site-footer .footer-social li,
+  #site-footer .footer-subscribe li {
+    line-height: 2.5em;
+  }
+}
+#site-footer .footer-social li {
+  display: inline-block;
+  margin-right: .5em;
+}
+#site-footer .footer-social li:first-child {
+  display: block;
+}
+@media (max-width: 768px) {
+  #site-footer .footer-social li a {
+    font-size: 2em;
+  }
 }

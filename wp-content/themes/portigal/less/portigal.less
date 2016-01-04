@@ -46,6 +46,7 @@
 }
 
 
+
 /* -------------------------------------------------------------------------------- */
 // BASIC
 
@@ -61,12 +62,18 @@ h1 {
 	color: @purple;
 	.franklinBook();
 	font-size: 3em;
+	@media (max-width: @screen-sm) {
+		font-size: 2em;
+	}
 }
 
 h2 {
 	color: @purple;
 	.franklinBook();
 	font-size: 1.75em;
+	@media (max-width: @screen-sm) {
+		font-size: 1.5em;
+	}
 }
 
 h3 {
@@ -74,6 +81,9 @@ h3 {
 	.franklinBook();
 	font-size: 1.5em;
 	margin-top: 1.5em;
+	@media (max-width: @screen-sm) {
+		font-size: 1em;
+	}
 }
 
 h4 {
@@ -103,6 +113,16 @@ h6 {
 p {
 	a {
 		.caslonB();
+	}
+}
+
+#main {
+	p,
+	ul {
+		font-size: 1.1em;
+		@media (max-width: @screen-sm) {
+			font-size: 1em;
+		}
 	}
 }
 
@@ -156,11 +176,12 @@ blockquote {
 		}
 	}
 	&.sidebar {
-		margin: 5em 0;
+		margin: 3em 0;
 	}
 }
 
 .arrow {
+	display: none;
     width: 65px;
     height: auto;
     margin-left: 1em;
@@ -169,16 +190,24 @@ blockquote {
     g {
     	fill: @purple;
     }
+   	@media (max-width: @screen-sm) {
+		width: 43px;
+		top: 2.5px;
+	}
 }
 
 .secondary-section {
 	padding: 4em 0;
+	margin-top: 3em;
 	background-color: @purple-light;
 }
 
 .top-secondary {
 	margin-top: -4em;
 	margin-bottom: 4em;
+	p {
+		font-size: 1.25em;
+	}
 }
 
 .quote {
@@ -278,7 +307,16 @@ article {
 		.franklinMedium();
 		margin-bottom: 1.5em;
 		span {
-			color: lighten(@black, 50%);
+			.franklinBook();
+			color: lighten(@black, 70%);
+			margin-left: .5em;
+			&:before {
+				content: "|";
+				margin-right: .5em;
+			}
+			a {
+				.franklinBook();
+			}
 		}
 	}
 	h1 {
@@ -308,7 +346,7 @@ article {
 			color: @purple;
 		}
 		.tags {
-			display: inline-block;
+			display: inline;
 			font-size: .9em;
 			a {
 				color: @black;
@@ -320,6 +358,18 @@ article {
 	}
 	.steve-more {
 		float: right;
+	}
+	img.alignleft {
+		float: left;
+		max-width: 50%;
+		width: auto;
+		margin-right: 1em;
+	}
+	img.alignright {
+		float: right;
+		max-width: 50%;
+		width: auto;
+		margin-left: 1em;
 	}
 }
 
@@ -338,27 +388,24 @@ article {
 	}
 }
 
-#other-news {
-	img {
-		display: none;
+.testimonials {
+	h2 {
+		margin-top: 3em;
+	}
+	.testimonial:first-child {
+		margin-top: 1em;
 	}
 }
 
-.client-list {
-	ul {
-		list-style-type: none;
-		padding: 0;
-		margin: 0;
-		-webkit-columns: 3;
-		-moz-columns: 3;
-        columns: 3;
-        @media (max-width: 600px) {
-        	-webkit-columns: 2;
-			-moz-columns: 2;
-	        columns: 2;
-        }
+
+#other-news {
+	img {
+		max-width: 25%;
+		float: left;
+		margin-right: 1em;
 	}
 }
+
 
 // Media Player
 
@@ -441,17 +488,43 @@ article {
 			@media (max-width: @screen-sm) {
 				padding: 1em 0;
 			}
+			#menu-main-menu {
+				list-style-type: none;
+				margin-bottom: 0;
+				padding-left: 0;
+				li {
+					float: left;
+					@media (max-width: @screen-sm) {
+						float: none;
+						a {
+						display: block;
+					}
+					}
+					a {
+						display: inline-block;
+					}
+				}
+			}
 			ul {
 				li {
 					border-right: 1px solid @white;
 					&:first-child a {
-						padding-left: 0;
+						margin-left: -2em;
+						@media (max-width: 1199px) {
+							margin-left: -1.5em;
+						}
+						@media (max-width: 995px) {
+							margin-left: -1em;
+						}
 					}
 					a {
 						background-image: none;
 						box-shadow: none;
 						text-transform: uppercase;
 						padding: 1em 2em;
+					}
+					&.active {
+						background-color: lighten(@purple, 5%);
 					}
 				}
 			}
@@ -462,12 +535,21 @@ article {
 				ul li {
 					border: none;
 					a {
-						padding: 1em 0;
+						padding: 1em;
+						margin: 0;
 					}
 				}
 				.header-email {
+					width: 100%;
 					a {
-						padding: 1em 0;
+						padding: 1em;
+						width: 100%;
+						@media (max-width: 1199px) {
+							margin-right: -1.5em;
+						}
+						@media (max-width: 995px) {
+							margin-right: -1em;
+						}
 					}
 				}
 			}
@@ -476,7 +558,7 @@ article {
 			float: left;
 			a {
 				padding: 1em 2em;
-				padding-right: 0;
+				margin-right: -2em;
 				display: inline-block;
 			}
 			.icon {
@@ -485,23 +567,30 @@ article {
 			    top: 3px;
 			}
 		}
+		.navbar-collapse ul li a,
+		.header-email a {
+			background-color: transparent;
+			transition: all .1s ease-in-out;
+			&:hover {
+				background-color: lighten(@purple, 10%);
+				transition: all .1s ease-in-out;
+			}
+		}
 		@media (max-width: 1199px) {
 			font-size: .9em;
-			.navbar-collapse ul li a,
-			.header-email a {
+			.navbar-collapse ul li a {
 				padding: .75em 1.5em;
 			}
 			.header-email a {
-				padding-right: 0;
+				padding: .75em 1.5em;
 			}
 		}
 		@media (max-width: 995px) {
-			.navbar-collapse ul li a,
-			.header-email a {
+			.navbar-collapse ul li a {
 				padding: .5em 1em;
 			}
 			.header-email a {
-				padding-right: 0;
+				padding: .5em 1em;
 			}
 		}
 	}
@@ -554,9 +643,36 @@ article {
 		margin: 0 0 0 1.5em;
 		padding: 0;
 	}
+	.testimonial {
+		margin: 1em 0 2em;
+		padding-bottom: 1em;
+		.testimonial-body {
+			font-size: 1em;
+		}
+		.attribution {
+			font-size: .9em;
+		}
+	}
 }
 
-
+.client-list {
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		-webkit-columns: 2;
+		-moz-columns: 2;
+        columns: 2;
+        @media (max-width: 600px) {
+        	-webkit-columns: 2;
+			-moz-columns: 2;
+	        columns: 2;
+        }
+        li {
+        	margin: 0;
+        }
+	}
+}
 
 
 /* -------------------------------------------------------------------------------- */
@@ -581,11 +697,52 @@ article {
 	}
 }
 
+.episode-list {
+	li {
+		margin-bottom: 0 !important;
+	}
+}
+
+article.podcast {
+	.post-meta {
+		margin-bottom: 0;
+	}
+}
+
+/* -------------------------------------------------------------------------------- */
+// HOMEPAGE
+
+#homepage {
+	background: @purple;
+	color: @white;
+	border-bottom: 1px solid @white;
+	padding: 6em 0;
+	min-height: 10em;
+	@media (max-width: @screen-sm) {
+		padding: 3em 0;
+	}
+	.intro-text {
+		font-size: 1.75em;
+		padding: 2em 0em;
+		@media (max-width: @screen-sm) {
+			font-size: 1.25em;
+		}
+	}
+}
+
+.page-template-home-page {
+	#header {
+		margin-bottom: 0;
+	}
+}
 
 /* -------------------------------------------------------------------------------- */
 // BLOG
 
 .sidebar-section {
+	h2 {
+		margin-bottom: .75em;
+	}
 	.blog-list {
 		li {
 			margin-bottom: 0;
@@ -607,6 +764,22 @@ article {
     a {
     	.franklinBook();
     }
+}
+
+.serieslist-box {
+	&:first-child {
+		margin-top: 1em;
+	}
+	.serieslist-content {
+		h2 {
+			.caslon();
+			font-size: .8em;
+			margin: .5em 0;
+		}
+	}
+	p, hr, .imgset {
+		display: none;
+	}
 }
 
 /*
@@ -633,6 +806,11 @@ article {
 
 .book {
 	margin-bottom: 4em;
+	border-bottom: 1px solid @purple;
+	padding-bottom: 4em;
+	&:last-child {
+		border: none;
+	}
 	h1 {
 		margin-top: .25em;
 	}
@@ -641,6 +819,47 @@ article {
 	}
 }
 
+.book-cover {
+	margin-bottom: 4em;
+	&.at-small {
+		float: left;
+		max-width: 18%;
+		min-width: 100px;
+		margin-right: 2em;
+		margin-bottom: 1.5em;
+	}
+}
+
+.buy-the-book {
+	ul {
+		li {
+			margin-bottom: auto;
+		}
+	}
+}
+
+
+/* -------------------------------------------------------------------------------- */
+// SPEAKING
+
+.selected-talks {
+	> h2 {
+		margin-top: .85em;
+	}
+}
+
+/* -------------------------------------------------------------------------------- */
+// SEARCH
+
+.search-info {
+	margin-bottom: 3em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid @purple;
+	span {
+		color: @black;
+		.caslonB();
+	}
+}
 
 /* -------------------------------------------------------------------------------- */
 // FOOTER
@@ -666,6 +885,9 @@ article {
 		.franklinBook();
 		margin-bottom: 3em;
 		font-size: 1.2em;
+		a:hover li {
+			opacity: .5;
+		}
 	}
 	.footer-p {
 		margin-bottom: 3em;
@@ -684,7 +906,7 @@ article {
 		}
 		img {
 			float: left;
-			max-width: 33%;
+			max-width: 140px;
 			margin-right: 1em;
 		}
 	}
@@ -693,6 +915,23 @@ article {
 		margin-bottom: 3em;
 		li {
 			line-height: 2em;
+			@media (max-width: @screen-sm) {
+				line-height: 2.5em;
+			}
+		}
+	}
+	.footer-social {
+		li {
+			display: inline-block;
+			margin-right: .5em;
+			&:first-child {
+				display: block;
+			}
+			@media (max-width: @screen-sm) {
+				a {
+					font-size: 2em;
+				}
+			}
 		}
 	}
 }
