@@ -31,7 +31,7 @@
                         <div class="col-md-12 col-sm-6 col-xs-12">
                         <div class="footer-media-item">
                             <a href="<?php the_permalink(); ?>">
-                              <img src="<?php bloginfo('stylesheet_directory'); ?>/img/interviewing-users.jpg"/>
+                              <img src="<?php the_field('cover_image'); ?>"/>
                             </a>
                             <p class="footer-label">Read</p>
                             <a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p></a>

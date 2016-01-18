@@ -6848,7 +6848,7 @@ h4 {
   font-style: normal;
   font-weight: 400;
   font-size: 1.25em;
-  margin-top: 2em;
+  margin: 2em 0 .75em;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -6930,6 +6930,14 @@ blockquote {
 }
 .steve-more.sidebar {
   margin: 2em 0;
+}
+.read-more {
+  color: #ffffff;
+  font-family: "franklin-gothic-urw-cond", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 1em 0;
+  display: inline-block;
 }
 .arrow {
   display: none;
@@ -7085,6 +7093,9 @@ article h1 {
 article h2 {
   margin-top: 2em;
 }
+article h4 {
+  margin-top: 3em;
+}
 article h6 {
   margin-top: 1em;
   margin-bottom: 1em;
@@ -7100,6 +7111,9 @@ article .post-content {
   padding-bottom: 1em;
   border-bottom: 1px solid #665079;
   margin-top: 1em;
+}
+article .post-content ul {
+  margin-bottom: 2em;
 }
 article .post-tags .tag-title {
   display: inline-block;
@@ -7453,7 +7467,7 @@ article img.alignright {
 }
 /* -------------------------------------------------------------------------------- */
 .podcast-intro {
-  margin: 3em 0 5em;
+  margin: 3em 0;
 }
 .podcast-intro img {
   max-width: 200px;
@@ -7489,7 +7503,7 @@ article.podcast {
   background: #665079;
   color: #ffffff;
   border-bottom: 1px solid #ffffff;
-  padding: 6em 0;
+  padding: 6em 0 0;
   min-height: 10em;
 }
 @media (max-width: 768px) {
@@ -7497,14 +7511,71 @@ article.podcast {
     padding: 3em 0;
   }
 }
+#homepage .homepage-row {
+  border-bottom: 1px solid #ffffff;
+}
+#homepage .homepage-row:last-child {
+  border: none;
+}
+#homepage .homepage-row .homepage-padding {
+  padding: 2em 0;
+}
+#homepage .homepage-row .workshop-text {
+  border-right: 1px solid #ffffff;
+  padding-right: 2em;
+}
 #homepage .intro-text {
   font-size: 1.75em;
-  padding: 2em 0em;
+  padding-bottom: 3em;
 }
 @media (max-width: 768px) {
   #homepage .intro-text {
     font-size: 1.25em;
   }
+}
+#homepage a:hover {
+  opacity: .5;
+}
+#homepage h1 {
+  color: #ffffff;
+  font-size: 1.75em;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+#homepage h1 a,
+#homepage p a,
+#homepage li a {
+  color: #ffffff;
+}
+#homepage .homepage-book img {
+  max-width: 100px;
+  float: left;
+  margin-right: 1em;
+}
+#homepage .homepage-book p {
+  float: left;
+  width: 60%;
+}
+#homepage .selected-writing {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#homepage .selected-writing li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: .5em 0 1em;
+  margin-bottom: 1em;
+}
+#homepage .selected-writing li:last-child {
+  border: none;
+}
+#homepage .selected-writing li h1 {
+  font-size: 1.3em;
+  margin-bottom: .5em;
+}
+#homepage .selected-writing li .publication {
+  opacity: .5;
+  margin: 0;
 }
 .page-template-home-page #header {
   margin-bottom: 0;

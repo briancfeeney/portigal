@@ -123,6 +123,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
+	"\/acf-json\/group_569d0febd2fd0.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/acf-json\/group_569d0febd2fd0.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/acf-json\/group_569d0febd2fd0-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/archive.php": {
 		"fileType": 8192,
 		"ignore": 0,

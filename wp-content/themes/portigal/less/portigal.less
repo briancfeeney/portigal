@@ -90,7 +90,7 @@ h4 {
 	color: @purple;
 	.franklinBook();
 	font-size: 1.25em;
-	margin-top: 2em;
+	margin: 2em 0 .75em;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
@@ -179,6 +179,13 @@ blockquote {
 	&.sidebar {
 		margin: 2em 0;
 	}
+}
+
+.read-more {
+	color: @white;
+	.franklinBook();
+	margin: 1em 0;
+	display: inline-block;
 }
 
 .arrow {
@@ -329,6 +336,9 @@ article {
 	h2 {
 		margin-top: 2em;
 	}
+	h4 {
+		margin-top: 3em;
+	}
 	h6 {
 		margin-top: 1em;
 		margin-bottom: 1em;
@@ -342,6 +352,9 @@ article {
 		padding-bottom: 1em;
 		border-bottom: 1px solid @purple;
 		margin-top: 1em;
+		ul {
+			margin-bottom: 2em;
+		}
 	}
 	.post-tags {
 		.tag-title {
@@ -713,7 +726,7 @@ article {
 // PODCAST
 
 .podcast-intro {
-	margin: 3em 0 5em;
+	margin: 3em 0;
 	img {
 		max-width: 200px;
 		margin-bottom: 2em;
@@ -758,16 +771,76 @@ article.podcast {
 	background: @purple;
 	color: @white;
 	border-bottom: 1px solid @white;
-	padding: 6em 0;
+	padding: 6em 0 0;
 	min-height: 10em;
 	@media (max-width: @screen-sm) {
 		padding: 3em 0;
 	}
+	.homepage-row {
+		border-bottom: 1px solid @white;
+		&:last-child {
+			border: none;
+		}
+		.homepage-padding {
+			padding: 2em 0;
+		}
+		.workshop-text {
+			border-right: 1px solid @white;
+			padding-right: 2em;
+		}
+	}
 	.intro-text {
 		font-size: 1.75em;
-		padding: 2em 0em;
+		padding-bottom: 3em;
 		@media (max-width: @screen-sm) {
 			font-size: 1.25em;
+		}
+	}
+	a:hover {
+		opacity: .5;
+	}
+	h1 {
+		color: @white;
+		font-size: 1.75em;
+		margin-top: 0;
+		margin-bottom: 1em;
+	}
+	h1, p, li {
+		a {
+			color: @white;
+		}
+	}
+	.homepage-book {
+		img {
+			max-width: 100px;
+			float: left;
+			margin-right: 1em;
+		}
+		p {
+			float: left;
+			width: 60%;
+		}
+	}
+	.selected-writing {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		li {
+			border-bottom: 1px solid fade(@white, 20%);
+			margin-bottom: 1em;
+			padding: .5em 0 1em;
+			margin-bottom: 1em;
+			&:last-child {
+				border: none;
+			}
+			h1 {
+				font-size: 1.3em;
+				margin-bottom: .5em;
+			}
+			.publication {
+				opacity: .5;
+				margin: 0;
+			}
 		}
 	}
 }
