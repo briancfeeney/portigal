@@ -1,6 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Portigal | <?php is_home() ? bloginfo('description') : wp_title(''); ?></title>
+
+	<title>Portigal | <?php echo ( ( is_home() || is_front_page() ) ? 'Think and act strategically' : wp_title('', false) ); ?></title>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo('charset'); ?>" />
 	<meta name="keywords" content="Steve Portigal, strategy, consulting, product design, design, ethnography, ethnographic research, insight, culture, understanding, Portigal">
@@ -9,7 +10,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/portigal.css" type="text/css" media="screen" />
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- add a fallback to a local jquery -->
 
 	<script src="https://use.typekit.net/dsj5yjf.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -17,7 +19,7 @@
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.fitvids.js"></script>
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/collapse.js"></script>
 
-	<script language="javascript" type="text/javascript" src="<?php echo esc_url(home_url('/')); ?>/scripts.js"></script>
+	<!--script language="javascript" type="text/javascript" src="<?php echo esc_url(home_url('/')); ?>/scripts.js"></script-->
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" />
 	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />

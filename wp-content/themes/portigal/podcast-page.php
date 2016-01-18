@@ -16,6 +16,32 @@ Template Name: Podcast
 	    <?php echo $podcast_intro ?>
 	  </div>
 
+<!-- CUSTOM POST TYPE -->
+		<?php
+			global $post;
+			$posts = get_posts( array( 'post_type' => 'Podcast', 'posts_per_page' => '100') );
+			if( $posts ):
+			   foreach( $posts as $post ) :   
+			    setup_postdata($post); ?>
+
+			<article class="post podcast">
+				<a class="title" href="<?php the_permalink() ?>" style="text-decoration:none;" rel="bookmark" title="Permanent Link: <?php the_title(); ?>"><h1><?php the_title(); ?></h1></a>
+				<p class="post-meta"><?php the_time('F jS, Y') ?> <span>From the Series <a href="/dollars-to-donuts">Dollars To Donuts</a></span></p>
+				<div class="post-content">
+					<?php the_excerpt(); ?>
+				</div>
+				<a class="read-more">Read the full transcript</a>
+				<!--
+				<div class="post-tags">
+					<?php the_tags( '<p class="tag-title">Tags:</p><p class="tags">', ', ', '</p>'); ?>
+				</div> -->
+			</article>
+
+			   <?php endforeach; 
+			wp_reset_postdata(); 
+		endif; ?>
+<!-- END CUSTOM POST TYPE -->
+
 		<?php
 		$wp_query = new WP_Query();
 		$wp_query->query(array(

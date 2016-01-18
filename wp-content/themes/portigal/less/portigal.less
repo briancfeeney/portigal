@@ -149,7 +149,8 @@ blockquote {
 	margin: 1.5em 0;
 }
 
-*:focus {
+*:focus,
+*:active {
 	outline: none;
 }
 
@@ -176,7 +177,7 @@ blockquote {
 		}
 	}
 	&.sidebar {
-		margin: 3em 0;
+		margin: 2em 0;
 	}
 }
 
@@ -305,7 +306,7 @@ article {
 	}
 	.post-meta {
 		.franklinMedium();
-		margin-bottom: 1.5em;
+		margin-bottom: 0em;
 		span {
 			.franklinBook();
 			color: lighten(@black, 70%);
@@ -318,6 +319,9 @@ article {
 				.franklinBook();
 			}
 		}
+	}
+	p {
+		font-size: 1.2em;
 	}
 	h1 {
 		font-size: 2.5em;
@@ -333,10 +337,11 @@ article {
 		.caslonB();
 	}
 	.post-content {
-		overflow: hidden;
+		/* overflow: hidden; */
 		margin-bottom: 1em;
 		padding-bottom: 1em;
 		border-bottom: 1px solid @purple;
+		margin-top: 1em;
 	}
 	.post-tags {
 		.tag-title {
@@ -358,6 +363,12 @@ article {
 	}
 	.steve-more {
 		float: right;
+	}
+	img {
+		width: inherit;
+		max-width: 100%;
+		height: auto;
+		margin-bottom: 1em;
 	}
 	img.alignleft {
 		float: left;
@@ -411,6 +422,7 @@ article {
 
 .powerpress_player {
 	margin: 1em 0;
+	margin-left: -8px;
 	.mejs-container {
 		.mejs-controls {
 			background: white;
@@ -423,15 +435,27 @@ article {
 			div[aria-label="volumeSlider"] {
 				display: none;
 			}
+			button:focus {
+				outline: none;
+			}
 			.mejs-time-rail {
 				.mejs-time-total {
 					background: lighten(@black, 80%);
+				}
+				.mejs-time-loaded {
+					background: lighten(@black, 70%);
 				}
 				.mejs-time-current {
 					background: @linkhover;
 				}
 				.mejs-time-handle {
 					background: @purple;
+				}
+				.mejs-time-float-corner {
+					display: none;
+				}
+				.mejs-time-float {
+					border: solid 1px @purple;
 				}
 			}
 		}
@@ -575,6 +599,12 @@ article {
 				background-color: lighten(@purple, 10%);
 				transition: all .1s ease-in-out;
 			}
+			&:focus {
+				text-decoration: none;
+			}
+		}
+		.navbar-collapse ul li.current-menu-item a {
+			background-color: lighten(@purple, 10%);
 		}
 		@media (max-width: 1199px) {
 			font-size: .9em;
@@ -623,6 +653,7 @@ article {
 	padding-bottom: 1em;
 	border-bottom: 1px solid @purple;
 	margin-bottom: 5em;
+	margin-top: 2em;
 	p {
 		font-size: 1.1em;
 	}
@@ -632,6 +663,9 @@ article {
 	overflow: hidden;
 	margin-bottom: 3em;
 	max-width: 30em;
+	&:first-of-type {
+		padding-top: 3.1em;
+	}
 	ul {
 		.list-unstyled();
 		margin: 1em 0;
@@ -703,9 +737,17 @@ article {
 	}
 }
 
+/*
 article.podcast {
 	.post-meta {
-		margin-bottom: 0;
+		margin-bottom: 1em;
+	}
+}
+*/
+
+.page-template-podcast-page {
+	.powerpress_player {
+		display: none;
 	}
 }
 
@@ -906,7 +948,7 @@ article.podcast {
 		}
 		img {
 			float: left;
-			max-width: 140px;
+			max-width: 100px;
 			margin-right: 1em;
 		}
 	}

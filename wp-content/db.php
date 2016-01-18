@@ -1,0 +1,1 @@
+/Users/bcfeeney/Sites/Portigal/wp-content/plugins/query-monitor/wp-content/db.php

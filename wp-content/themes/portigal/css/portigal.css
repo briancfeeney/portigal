@@ -6904,7 +6904,8 @@ blockquote {
   font-size: 1.1em;
   margin: 1.5em 0;
 }
-*:focus {
+*:focus,
+*:active {
   outline: none;
 }
 /* -------------------------------------------------------------------------------- */
@@ -6928,7 +6929,7 @@ blockquote {
   fill: #9982ad;
 }
 .steve-more.sidebar {
-  margin: 3em 0;
+  margin: 2em 0;
 }
 .arrow {
   display: none;
@@ -7057,7 +7058,7 @@ article .post-meta {
   font-family: "franklin-gothic-urw-cond", sans-serif;
   font-style: normal;
   font-weight: 500;
-  margin-bottom: 1.5em;
+  margin-bottom: 0em;
 }
 article .post-meta span {
   font-family: "franklin-gothic-urw-cond", sans-serif;
@@ -7075,6 +7076,9 @@ article .post-meta span a {
   font-style: normal;
   font-weight: 400;
 }
+article p {
+  font-size: 1.2em;
+}
 article h1 {
   font-size: 2.5em;
 }
@@ -7091,10 +7095,11 @@ article a {
   font-weight: 700;
 }
 article .post-content {
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-bottom: 1em;
   padding-bottom: 1em;
   border-bottom: 1px solid #665079;
+  margin-top: 1em;
 }
 article .post-tags .tag-title {
   display: inline-block;
@@ -7116,6 +7121,12 @@ article .post-tags .tags a:hover {
 }
 article .steve-more {
   float: right;
+}
+article img {
+  width: inherit;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1em;
 }
 article img.alignleft {
   float: left;
@@ -7158,6 +7169,7 @@ article img.alignright {
 }
 .powerpress_player {
   margin: 1em 0;
+  margin-left: -8px;
 }
 .powerpress_player .mejs-container .mejs-controls {
   background: white;
@@ -7171,14 +7183,26 @@ article img.alignright {
 .powerpress_player .mejs-container .mejs-controls div[aria-label="volumeSlider"] {
   display: none;
 }
+.powerpress_player .mejs-container .mejs-controls button:focus {
+  outline: none;
+}
 .powerpress_player .mejs-container .mejs-controls .mejs-time-rail .mejs-time-total {
   background: #cccccc;
+}
+.powerpress_player .mejs-container .mejs-controls .mejs-time-rail .mejs-time-loaded {
+  background: #b3b3b3;
 }
 .powerpress_player .mejs-container .mejs-controls .mejs-time-rail .mejs-time-current {
   background: #9982ad;
 }
 .powerpress_player .mejs-container .mejs-controls .mejs-time-rail .mejs-time-handle {
   background: #665079;
+}
+.powerpress_player .mejs-container .mejs-controls .mejs-time-rail .mejs-time-float-corner {
+  display: none;
+}
+.powerpress_player .mejs-container .mejs-controls .mejs-time-rail .mejs-time-float {
+  border: solid 1px #665079;
 }
 /* -------------------------------------------------------------------------------- */
 #portigal-wordmark {
@@ -7329,6 +7353,13 @@ article img.alignright {
   background-color: #806498;
   transition: all 0.1s ease-in-out;
 }
+#header .main-navigation .navbar-collapse ul li a:focus,
+#header .main-navigation .header-email a:focus {
+  text-decoration: none;
+}
+#header .main-navigation .navbar-collapse ul li.current-menu-item a {
+  background-color: #806498;
+}
 @media (max-width: 1199px) {
   #header .main-navigation {
     font-size: .9em;
@@ -7367,6 +7398,7 @@ article img.alignright {
   padding-bottom: 1em;
   border-bottom: 1px solid #665079;
   margin-bottom: 5em;
+  margin-top: 2em;
 }
 .sidebar-intro p {
   font-size: 1.1em;
@@ -7375,6 +7407,9 @@ article img.alignright {
   overflow: hidden;
   margin-bottom: 3em;
   max-width: 30em;
+}
+.sidebar-section:first-of-type {
+  padding-top: 3.1em;
 }
 .sidebar-section ul {
   padding-left: 0;
@@ -7439,8 +7474,15 @@ article img.alignright {
 .episode-list li {
   margin-bottom: 0 !important;
 }
-article.podcast .post-meta {
-  margin-bottom: 0;
+/*
+article.podcast {
+	.post-meta {
+		margin-bottom: 1em;
+	}
+}
+*/
+.page-template-podcast-page .powerpress_player {
+  display: none;
 }
 /* -------------------------------------------------------------------------------- */
 #homepage {
@@ -7616,7 +7658,7 @@ article.podcast .post-meta {
 }
 #site-footer .footer-media img {
   float: left;
-  max-width: 140px;
+  max-width: 100px;
   margin-right: 1em;
 }
 #site-footer .footer-social,

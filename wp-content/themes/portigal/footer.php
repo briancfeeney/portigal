@@ -5,7 +5,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <p class="footer-label">Get In Touch!</p>
+            <p class="footer-label">Get In Touch</p>
             <p class="footer-p"><?php the_field('footer_paragraph', 'option'); ?></p>
             <ul class="contact-info">
               <li><a href="mailto:<?php the_field('email', 'option'); ?>" target="_blank"><?php the_field('email', 'option'); ?></a><li>

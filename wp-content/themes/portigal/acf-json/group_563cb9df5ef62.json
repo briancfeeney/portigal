@@ -59,7 +59,7 @@
                 "id": ""
             },
             "post_type": [
-                "post"
+                "podcast"
             ],
             "taxonomy": [
                 "post_tag:dollars-to-donuts"
@@ -88,5 +88,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1446822449
+    "modified": 1452717696
 }

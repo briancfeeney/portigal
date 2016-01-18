@@ -28,19 +28,19 @@
     <h2>Episodes</h2>
     <ul class="episode-list">
       <?php
-        $wp_query = new WP_Query();
-        $wp_query->query(array(
-        'paged' => $paged,
-        'order' =>'ASC',
-        'posts_per_page' => 10,
-        'series' => 'dollarstodonuts',
-      ));
-      while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+        global $post;
+        $posts = get_posts( array( 'post_type' => 'Podcast', 'posts_per_page' => '100') );
+        if( $posts ):
+           foreach( $posts as $post ) :   
+            setup_postdata($post); ?>
+
         <li>
-          <a class="title" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+          <a class="title" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link: <?php the_title(); ?>"><?php the_title(); ?></a>
         </li>
-      <?php  endwhile; ?>
-      <?php wp_reset_postdata(); ?>
+
+           <?php endforeach; 
+        wp_reset_postdata(); 
+      endif; ?>
     </ul>
   </div>
   <div class="sidebar-section">

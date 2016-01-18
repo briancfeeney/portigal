@@ -24,16 +24,18 @@ Template Name: Blog Single
 				</div>
 			</article>
 
-		<!--
+
+
+		
 		<div class="pagination">
 			<?php if(get_next_post_link()) { ?>
-			<span class="next"><?php next_post_link('%link', 'Next Post') ?></span>
+			<span class="next"><?php next_post_link('%link', 'Next Episode') ?></span>
 			<?php } ?>
 			<?php if(get_previous_post_link()) { ?>
-			<span class="previous"><?php previous_post_link('%link', 'Previous Post') ?></span>
+			<span class="previous"><?php previous_post_link('%link', 'Previous Episode') ?></span>
 			<?php } ?>
 		</div>
-		-->
+		
 
 	</main>
 </div>

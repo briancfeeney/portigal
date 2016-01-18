@@ -14,6 +14,10 @@
  * @package WordPress
  */
 
+// DEVELOPMENTS
+define('WP_HOME', 'http://portigal.dev');
+define('WP_SITEURL', 'http://portigal.dev');
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'portigal_wp');
