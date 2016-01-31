@@ -11,11 +11,7 @@
               <li><a href="mailto:<?php the_field('email', 'option'); ?>" target="_blank"><?php the_field('email', 'option'); ?></a><li>
               <li><a href="tel:+<?php the_field('phone_number', 'option'); ?>"><?php the_field('phone_number', 'option'); ?></a></li>
               <br>
-              <li>Portigal Consulting LLC</li>
-                <a href="<?php the_field('link_to_map', 'option'); ?>" target="_blank">
-              <li><?php the_field('address_1', 'option'); ?></li>
-              <li><?php the_field('address_2', 'option'); ?></li>
-                </a> 
+              <li><a href="<?php the_field('link_to_map', 'option'); ?>">Portigal Consulting LLC<br><?php the_field('address_1', 'option'); ?><br><?php the_field('address_2', 'option'); ?></a></li>
             </ul>
           </div>
           <div class="col-md-4 col-md-offset-1">
@@ -164,8 +160,10 @@
 
     <?php wp_footer(); ?>
 
-    <script>
-      $("#content").fitVids();
+    <script>   
+      $(document).ready(function(){
+        $(".container").fitVids();
+      });
     </script>
   </body>
 </html>

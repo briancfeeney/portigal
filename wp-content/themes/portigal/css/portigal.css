@@ -6862,11 +6862,10 @@ h5 {
 }
 h6 {
   font-size: 1em;
-  margin-top: 2em;
+  margin-top: 2.5em;
   font-family: "adobe-caslon-pro", serif;
   font-style: italic;
   font-weight: 700;
-  text-transform: capitalize;
   color: #665079;
 }
 p a {
@@ -6929,7 +6928,7 @@ blockquote {
   fill: #9982ad;
 }
 .steve-more.sidebar {
-  margin: 2em 0;
+  margin: 2em 0 5em;
 }
 .read-more {
   color: #ffffff;
@@ -7127,9 +7126,6 @@ article .post-tags .tags {
   display: inline;
   font-size: .9em;
 }
-article .post-tags .tags a {
-  color: #000000;
-}
 article .post-tags .tags a:hover {
   color: #9982ad;
 }
@@ -7200,8 +7196,15 @@ article img.alignright {
 .powerpress_player .mejs-container .mejs-controls button:focus {
   outline: none;
 }
+.powerpress_player .mejs-container .mejs-controls a.mejs-horizontal-volume-slider .mejs-mute {
+  display: none;
+}
+.powerpress_player .mejs-container .mejs-controls .mejs-time-rail {
+  width: 90%;
+}
 .powerpress_player .mejs-container .mejs-controls .mejs-time-rail .mejs-time-total {
   background: #cccccc;
+  width: 89%;
 }
 .powerpress_player .mejs-container .mejs-controls .mejs-time-rail .mejs-time-loaded {
   background: #b3b3b3;
@@ -7379,10 +7382,10 @@ article img.alignright {
     font-size: .9em;
   }
   #header .main-navigation .navbar-collapse ul li a {
-    padding: .75em 1.5em;
+    padding: .7em 1.5em;
   }
   #header .main-navigation .header-email a {
-    padding: .75em 1.5em;
+    padding: .7em 1.5em;
   }
 }
 @media (max-width: 995px) {
@@ -7488,6 +7491,9 @@ article img.alignright {
 .episode-list li {
   margin-bottom: 0 !important;
 }
+.episode-list li a {
+  font-weight: bold;
+}
 /*
 article.podcast {
 	.post-meta {
@@ -7520,9 +7526,23 @@ article.podcast {
 #homepage .homepage-row .homepage-padding {
   padding: 2em 0;
 }
+@media (max-width: 768px) {
+  #homepage .homepage-row .homepage-padding {
+    padding: 4em 0;
+  }
+}
 #homepage .homepage-row .workshop-text {
   border-right: 1px solid #ffffff;
   padding-right: 2em;
+  min-height: 21em;
+}
+@media (max-width: 768px) {
+  #homepage .homepage-row .workshop-text {
+    border-right: none;
+    border-bottom: 1px solid #ffffff;
+    margin: 0 -1em;
+    padding: 3em 1em 2em;
+  }
 }
 #homepage .intro-text {
   font-size: 1.75em;
@@ -7530,7 +7550,8 @@ article.podcast {
 }
 @media (max-width: 768px) {
   #homepage .intro-text {
-    font-size: 1.25em;
+    font-size: 1.5em;
+    padding-top: 2em;
   }
 }
 #homepage a:hover {
@@ -7551,6 +7572,7 @@ article.podcast {
   max-width: 100px;
   float: left;
   margin-right: 1em;
+  margin-bottom: 4em;
 }
 #homepage .homepage-book p {
   float: left;
@@ -7727,6 +7749,12 @@ article.podcast {
   overflow: hidden;
   margin-bottom: 2em;
 }
+#site-footer .footer-media .footer-media-item a {
+  cursor: pointer;
+}
+#site-footer .footer-media .footer-media-item a:hover p {
+  opacity: .5;
+}
 #site-footer .footer-media img {
   float: left;
   max-width: 100px;
@@ -7757,4 +7785,7 @@ article.podcast {
   #site-footer .footer-social li a {
     font-size: 2em;
   }
+}
+img#wpstats {
+  display: none;
 }

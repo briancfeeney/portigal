@@ -104,9 +104,8 @@ h5 {
 
 h6 {
 	font-size: 1em;
-	margin-top: 2em;
+	margin-top: 2.5em;
 	.caslonBI();
-	text-transform: capitalize;
 	color: @purple;
 }
 
@@ -177,7 +176,7 @@ blockquote {
 		}
 	}
 	&.sidebar {
-		margin: 2em 0;
+		margin: 2em 0 5em;
 	}
 }
 
@@ -367,7 +366,6 @@ article {
 			display: inline;
 			font-size: .9em;
 			a {
-				color: @black;
 				&:hover {
 					color: lighten(@purple,20%);
 				}
@@ -451,9 +449,16 @@ article {
 			button:focus {
 				outline: none;
 			}
+			a.mejs-horizontal-volume-slider {
+				.mejs-mute {
+					display: none;
+				}
+			}
 			.mejs-time-rail {
+				width: 90%;
 				.mejs-time-total {
 					background: lighten(@black, 80%);
+					width: 89%;
 				}
 				.mejs-time-loaded {
 					background: lighten(@black, 70%);
@@ -622,10 +627,10 @@ article {
 		@media (max-width: 1199px) {
 			font-size: .9em;
 			.navbar-collapse ul li a {
-				padding: .75em 1.5em;
+				padding: .7em 1.5em;
 			}
 			.header-email a {
-				padding: .75em 1.5em;
+				padding: .7em 1.5em;
 			}
 		}
 		@media (max-width: 995px) {
@@ -747,6 +752,9 @@ article {
 .episode-list {
 	li {
 		margin-bottom: 0 !important;
+		a {
+			font-weight: bold;
+		}
 	}
 }
 
@@ -783,17 +791,28 @@ article.podcast {
 		}
 		.homepage-padding {
 			padding: 2em 0;
+			@media (max-width: @screen-sm) {
+				padding: 4em 0;
+			}
 		}
 		.workshop-text {
 			border-right: 1px solid @white;
 			padding-right: 2em;
+			min-height: 21em;
+			@media (max-width: @screen-sm) {
+				border-right: none;
+				border-bottom: 1px solid @white;
+				margin: 0 -1em;
+    			padding: 3em 1em 2em;
+			}
 		}
 	}
 	.intro-text {
 		font-size: 1.75em;
 		padding-bottom: 3em;
 		@media (max-width: @screen-sm) {
-			font-size: 1.25em;
+			font-size: 1.5em;
+			padding-top: 2em;
 		}
 	}
 	a:hover {
@@ -815,6 +834,7 @@ article.podcast {
 			max-width: 100px;
 			float: left;
 			margin-right: 1em;
+			margin-bottom: 4em;
 		}
 		p {
 			float: left;
@@ -1018,6 +1038,14 @@ article.podcast {
 		.footer-media-item {
 			overflow: hidden;
 			margin-bottom: 2em;
+			a {
+				cursor: pointer;
+				&:hover {
+					p {
+						opacity: .5;
+					}
+				}
+			}
 		}
 		img {
 			float: left;
@@ -1049,4 +1077,8 @@ article.podcast {
 			}
 		}
 	}
+}
+
+img#wpstats {
+	display: none;
 }
